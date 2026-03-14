@@ -18,7 +18,6 @@ A console-based Student Management System developed using Java, JDBC, and MySQL.
 - 📚 [Learning Outcomes](#-learning-outcomes)
 - 👤 [Author](#-author)
 
-
 ## ✨ Features
 
 * ➕ Add a new student
@@ -38,6 +37,14 @@ A console-based Student Management System developed using Java, JDBC, and MySQL.
 * **IntelliJ IDEA**
 
 ---
+## 🧠 Key Concepts Implemented
+
+- Object-Oriented Programming (OOP)
+- DAO (Data Access Object) Design Pattern
+- JDBC Database Connectivity
+- CRUD Operations
+- Input Validation
+- Modular Project Structure
 
 ## 📂 Project Structure
 
