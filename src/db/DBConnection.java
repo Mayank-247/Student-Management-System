@@ -2,23 +2,30 @@ package db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.Properties;
+import java.io.FileInputStream;
 
 public class DBConnection {
-
-    static String url = "jdbc:mysql://localhost:3306/studentdb";
-    static String user = "root";
-    static String password = "@MA44y55k66@";
 
     public static Connection getConnection() {
 
         try {
+
+            Properties props = new Properties();
+            FileInputStream fis = new FileInputStream("db.properties");
+            props.load(fis);
+
+            String url = props.getProperty("db.url");
+            String user = props.getProperty("db.user");
+            String password = props.getProperty("db.password");
+
             Connection conn = DriverManager.getConnection(url, user, password);
             return conn;
+
         } catch (Exception e) {
             System.out.println("Database connection failed");
             e.printStackTrace();
             return null;
         }
-
     }
 }
